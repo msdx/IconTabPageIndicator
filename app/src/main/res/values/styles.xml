@@ -3,15 +3,6 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="tabView">@style/TabView</item>
-        <item name="tabPageIndicator">@style/TabIndicator</item>
     </style>
-    <style name="TabIndicator"/>
-    <style name="TabView">
-        <item name="android:addStatesFromChildren">true</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:gravity">bottom|center_horizontal</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:background">@android:color/white</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
+
 </resources>
