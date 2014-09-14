@@ -8,7 +8,7 @@ android {
         applicationId "com.githang.viewpagerindicator"
         minSdkVersion 8
         targetSdkVersion 8
-        versionCode 2
+        versionCode 3
         versionName "1.0"
     }
     buildTypes {
