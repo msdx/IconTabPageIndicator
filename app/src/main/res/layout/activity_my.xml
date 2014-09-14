@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".MyActivity">
 
-    <com.githang.navigatordemo.IconTabPageIndicator
+    <com.githang.viewpagerindicator.IconTabPageIndicator
         android:id="@+id/indicator"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
