@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabView">
+        <attr name="tabPageIndicator" format="reference" />
+        <attr name="tabView" format="reference" />
+    </declare-styleable>
+</resources>
