@@ -1,4 +1,4 @@
-package com.githang.navigatordemo;
+package com.githang.viewpagerindicator;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -73,7 +73,7 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         super(context, attrs);
         setHorizontalScrollBarEnabled(false);
 
-        mTabLayout = new LinearLayout(context, null, R.attr.tabPageIndicator);
+        mTabLayout = new LinearLayout(context, null);
         addView(mTabLayout, new ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT));
     }
 
