@@ -47,7 +47,7 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             TabView tabView = (TabView) view;
             final int oldSelected = mViewPager.getCurrentItem();
             final int newSelected = tabView.getIndex();
-            mViewPager.setCurrentItem(newSelected);
+            mViewPager.setCurrentItem(newSelected, false);
             if (oldSelected == newSelected && mTabReselectedListener != null) {
                 mTabReselectedListener.onTabReselected(newSelected);
             }
@@ -225,7 +225,7 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             throw new IllegalStateException("ViewPager has not been bound.");
         }
         mSelectedTabIndex = item;
-        mViewPager.setCurrentItem(item);
+        mViewPager.setCurrentItem(item, false);
 
         final int tabCount = mTabLayout.getChildCount();
         for (int i = 0; i < tabCount; i++) {
