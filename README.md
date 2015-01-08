@@ -40,21 +40,12 @@ layout文件：
 
 如果想自定义图标或文字大小，可以style.xml中指定：
 ```
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <item name="tabView">@style/TabView</item>
+   <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="tabView">@style/MyTabView</item>
     </style>
 
-    <style name="TabView">
-        <item name="android:gravity">bottom|center_horizontal</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:background">@android:color/white</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:textColor">@color/tab_text_selector</item>
-        <item name="android:textSize">12sp</item>
-        <item name="iconWidth">27dp</item>
-        <item name="iconHeight">27dp</item>
-        <item name="android:paddingTop">4dp</item>
-        <item name="android:paddingBottom">4dp</item>
-        <item name="android:drawablePadding">2dp</item>
+    <style name="MyTabView" parent="TabView">
+        <item name="iconWidth">28dp</item>
+        <item name="iconHeight">28dp</item>
     </style>
 ```

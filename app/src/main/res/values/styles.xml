@@ -2,7 +2,11 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <item name="tabView">@style/TabView</item>
+        <item name="tabView">@style/MyTabView</item>
     </style>
 
+    <style name="MyTabView" parent="TabView">
+        <item name="iconWidth">28dp</item>
+        <item name="iconHeight">28dp</item>
+    </style>
 </resources>
