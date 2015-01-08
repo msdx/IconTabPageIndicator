@@ -1,18 +1,19 @@
 package com.githang.viewpagerindicator;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.viewpagerindicator.IconPagerAdapter;
 import com.viewpagerindicator.PageIndicator;
-
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
@@ -243,17 +244,22 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         mListener = listener;
     }
 
-    private class TabView extends LinearLayout {
+    private class TabView extends TextView {
         private int mIndex;
-        private ImageView mImageView;
-        private TextView mTextView;
+
+        private int iconWidth;
+        private int iconHeight;
 
         public TabView(Context context) {
-            super(context, null, R.attr.tabView);
-            View view = View.inflate(context, R.layout.tab_view, null);
-            mImageView = (ImageView) view.findViewById(R.id.tab_image);
-            mTextView = (TextView) view.findViewById(R.id.tab_text);
-            this.addView(view);
+            this(context, null, R.attr.tabView);
+        }
+
+        public TabView(Context context, AttributeSet attr, int defStyle) {
+            super(context, attr, defStyle);
+            TypedArray a = context.obtainStyledAttributes(attr, R.styleable.TabView, defStyle, 0);
+            iconWidth = a.getDimensionPixelSize(R.styleable.TabView_iconWidth, 0);
+            iconHeight = a.getDimensionPixelSize(R.styleable.TabView_iconHeight, 0);
+            a.recycle();
         }
 
         @Override
@@ -267,13 +273,14 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             }
         }
 
-        public void setText(CharSequence text) {
-            mTextView.setText(text);
-        }
-
         public void setIcon(int resId) {
             if (resId > 0) {
-                mImageView.setImageResource(resId);
+                final Resources resources = getContext().getResources();
+                Drawable icon = resources.getDrawable(resId);
+                int width = iconWidth == 0 ? icon.getIntrinsicWidth() : iconWidth;
+                int height = iconHeight == 0 ? icon.getIntrinsicHeight() : iconHeight;
+                icon.setBounds(0, 0, width, height);
+                setCompoundDrawables(null, icon, null, null);
             }
         }
 
@@ -282,4 +289,3 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         }
     }
 }
-

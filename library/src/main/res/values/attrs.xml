@@ -2,5 +2,9 @@
 <resources>
     <declare-styleable name="TabView">
         <attr name="tabView" format="reference" />
+        <attr name="iconWidth" format="dimension"/>
+        <attr name="iconHeight" format="dimension"/>
+        <attr name="iconPadding" format="dimension"/>
     </declare-styleable>
+
 </resources>
