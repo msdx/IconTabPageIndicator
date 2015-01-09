@@ -1,4 +1,4 @@
-package com.viewpagerindicator;
+package com.githang.viewpagerindicator;
 
 public interface IconPagerAdapter {
     /**

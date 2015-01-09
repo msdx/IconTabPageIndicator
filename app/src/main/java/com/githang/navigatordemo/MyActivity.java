@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.githang.viewpagerindicator.IconTabPageIndicator;
-import com.viewpagerindicator.IconPagerAdapter;
+import com.githang.viewpagerindicator.IconPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
