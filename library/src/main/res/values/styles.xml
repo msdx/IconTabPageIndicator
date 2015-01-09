@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="Theme.IndicatorDefault" parent="android:Theme">
         <item name="tabView">@style/TabView</item>

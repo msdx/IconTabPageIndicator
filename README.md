@@ -14,7 +14,7 @@
 然后在你的app module中添加此依赖：
 
 ```
-    compile 'com.githang:iconpagerindicator:1.1'
+    compile 'com.githang:iconpagerindicator:1.2'
 ```
 
 ##使用
