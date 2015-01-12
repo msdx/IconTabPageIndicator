@@ -1,6 +1,8 @@
 #IconTabPageIndicator
 
-带图标文字的底部导航栏，详见博客：http://blog.csdn.net/maosidiaoxian/article/details/38864679
+带图标文字的底部导航栏，可配置显示的图标的大小，不担心再把文字顶出下面。
+
+![导航栏截图](screenshot/screenshot.png "导航栏截图")
 
 ##安装
 
@@ -20,7 +22,7 @@
 ##使用
 
 layout文件：
-```
+```xml
     <com.githang.viewpagerindicator.IconTabPageIndicator
            android:id="@+id/indicator"
            android:layout_alignParentBottom="true"
@@ -39,7 +41,7 @@ layout文件：
 ```
 
 如果想自定义图标或文字大小，可以style.xml中指定：
-```
+```xml
    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="tabView">@style/MyTabView</item>
     </style>
