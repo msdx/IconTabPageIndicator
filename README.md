@@ -1,5 +1,8 @@
 #IconTabPageIndicator
 
+**此项目功能已集成到[msdx/ViewPagerIndicator](https://github.com/msdx/ViewPagerIndicator/tree/msdx).**
+
+---
 带图标文字的底部导航栏，可配置显示的图标的大小，不担心再把文字顶出下面。
 
 ![导航栏截图](screenshot/screenshot.png "导航栏截图")
